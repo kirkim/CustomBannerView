@@ -8,18 +8,16 @@
 
 ## How to use
 
-you just make `BeminBannerView` & `BeminBannerViewModel`.
+you just make `BeminBannerView`.
 
 ---
 
 ### &lt; Sample use &gt;
 
-you must bind `BeminBannerView` & `BeminBannerViewModel`. Otherwise, there will be crushed due to the Timer inside.
+First, make `BeminBannerView`.
 
 ```swift
-private let banner = BeminBannerView()
-let bannerViewModel = BeminBannerViewModel(
-    parentViewController: self,
+private let banner = BeminBannerView(
     data: BannerSources(
         bannerType: .event,
         title: "이벤트",
@@ -33,7 +31,12 @@ let bannerViewModel = BeminBannerViewModel(
         ]
     )
 )
-self.banner.bind(bannerViewModel)
+```
+
+If you want to present SubViewController by click Event. you have to call `.addTouchEvent(targetViewController: UIViewController)` function.
+
+```swift
+    self.banner.addTouchEvent(targetViewController: self)
 ```
 
 ---
@@ -58,7 +61,7 @@ struct BannerSources {
 
 ---
 
-- bannerType: `.event`, `.basic`
+- `bannerType`: `.event`, `.basic`
 
 #### .event
 <img src="https://kirkim.github.io/assets/storage/beminBanner/eventButton.gif" width="25%" style="max-width:200px" alt="eventbutton">
@@ -68,12 +71,12 @@ struct BannerSources {
 
 ---
 
-- title: banner main title
-- subTitle: title in TotalBannerView
+- `title`: banner main title
+- `subTitle`: title in TotalBannerView
 <img src="https://kirkim.github.io/assets/storage/beminBanner/title_subtitle.png" width="30%" style="max-width:200px" alt="title & subtitle">
 
 ---
 
-- totalViewCellRatio:
+- `totalViewCellRatio`:
     totalViewCellRatio = B / A
 <img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">

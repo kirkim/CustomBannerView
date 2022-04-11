@@ -18,7 +18,10 @@ class BeminBannerViewModel {
     // View -> ViewModel
     let buttonTapped = PublishRelay<Void>()
     
-    init(parentViewController: UIViewController, data: BannerSources) {
+    // ViewModel -> View
+    let presentVC = PublishRelay<UIViewController>()
+    
+    init(data: BannerSources) {
         let bannerImageNames = data.sources.map { $0.bannerCellImageName }
         let totalPageCount = data.sources.count
         let totalBannerListData = data.sources.map { TotalBannerListData(cellImage: $0.totalViewCellImageName, presentVC: $0.presentVC)}
@@ -30,11 +33,13 @@ class BeminBannerViewModel {
             switch bannerType {
             case .basic:
                 let vc = data.sources[nowPage].presentVC
-                parentViewController.navigationController?.pushViewController(vc, animated: true)
+//                parentViewController.navigationController?.pushViewController(vc, animated: true)
+                self.presentVC.accept(vc)
             case .event:
                 let listView = TotalBannerListView(title: data.title, subTitle: data.subTitle, cellRatio: data.totalViewCellRatio)
                 listView.bind(self.totalBannerListViewModel)
-                parentViewController.navigationController?.pushViewController(listView, animated: true)
+//                parentViewController.navigationController?.pushViewController(listView, animated: true)
+                self.presentVC.accept(listView)
             }
         }
         .disposed(by: disposeBag)
@@ -42,7 +47,8 @@ class BeminBannerViewModel {
         bannerListViewModel.presentVC
             .emit { indexPath in
                 let vc = data.sources[indexPath.row].presentVC
-                parentViewController.present(vc, animated: true)
+//                parentViewController.present(vc, animated: true)
+                self.presentVC.accept(vc)
             }
             .disposed(by: disposeBag)
     }

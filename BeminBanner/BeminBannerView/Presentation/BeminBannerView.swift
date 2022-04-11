@@ -14,10 +14,13 @@ class BeminBannerView: UIView {
     let disposeBag = DisposeBag()
     private let bannerListView = BeminBannerListView()
     private let bannerButton = BeminBannerButton()
+    private let viewModel: BeminBannerViewModel
 
     //MARK: - MyBannerUsingRxswift init
-    init() {
+    init(data: BannerSources) {
+        self.viewModel = BeminBannerViewModel(data: data)
         super.init(frame: CGRect.zero)
+        self.bind()
         self.layout()
         self.attribute()
     }
@@ -45,12 +48,20 @@ class BeminBannerView: UIView {
    
     }
     
-    func bind(_ viewModel: BeminBannerViewModel) {
+    private func bind() {
         self.bannerListView.bind(viewModel.bannerListViewModel)
         self.bannerButton.bind(viewModel.buttonViewModel)
         
         self.bannerButton.rx.tap
             .bind(to: viewModel.buttonTapped)
+            .disposed(by: disposeBag)
+    }
+    
+    func addTouchEvent(targetViewController: UIViewController) {
+        viewModel.presentVC
+            .bind { vc in
+                targetViewController.navigationController?.pushViewController(vc, animated: true)
+            }
             .disposed(by: disposeBag)
     }
 }
