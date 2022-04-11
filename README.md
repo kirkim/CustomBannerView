@@ -10,6 +10,8 @@
 
 you just make `BeminBannerView` & `BeminBannerViewModel`.
 
+---
+
 ### &lt; Sample use &gt;
 
 you must bind `BeminBannerView` & `BeminBannerViewModel`. Otherwise, there will be crushed due to the Timer inside.
@@ -34,6 +36,8 @@ let bannerViewModel = BeminBannerViewModel(
 self.banner.bind(bannerViewModel)
 ```
 
+---
+
 ### Struct Type
 
 ```swift
@@ -52,17 +56,24 @@ struct BannerSources {
 }
 ```
 
+---
+
 - bannerType: `.event`, `.basic`
 
 #### .event
-<img src="https://kirkim.github.io/assets/storage/beminBanner/eventButton.gif" width="30%" style="max-width:200px" alt="eventbutton">
+<img src="https://kirkim.github.io/assets/storage/beminBanner/eventButton.gif" width="25%" style="max-width:200px" alt="eventbutton">
+
 #### .basic
-<img src="https://kirkim.github.io/assets/storage/beminBanner/basicButton.gif" width="30%" style="max-width:200px" alt="basicbutton">
+<img src="https://kirkim.github.io/assets/storage/beminBanner/basicButton.gif" width="25%" style="max-width:200px" alt="basicbutton">
+
+---
 
 - title: banner main title
 - subTitle: title in TotalBannerView
 <img src="https://kirkim.github.io/assets/storage/beminBanner/title_subtitle.png" width="30%" style="max-width:200px" alt="title & subtitle">
 
+---
+
 - totalViewCellRatio:
-<img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">
     totalViewCellRatio = B / A
+<img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">
