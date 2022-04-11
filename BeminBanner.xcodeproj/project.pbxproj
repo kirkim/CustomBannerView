@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEAFE6B42803B089004104DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6B32803B089004104DF /* AppDelegate.swift */; };
+		FEAFE6B62803B089004104DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6B52803B089004104DF /* SceneDelegate.swift */; };
+		FEAFE6BD2803B089004104DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAFE6BC2803B089004104DF /* Assets.xcassets */; };
+		FEAFE6C02803B089004104DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAFE6BE2803B089004104DF /* LaunchScreen.storyboard */; };
+		FEAFE6DA2803B0CF004104DF /* BeminBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6C92803B0CF004104DF /* BeminBannerViewModel.swift */; };
+		FEAFE6DB2803B0CF004104DF /* BeminBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6CC2803B0CF004104DF /* BeminBannerButton.swift */; };
+		FEAFE6DC2803B0CF004104DF /* BeminBannerButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6CD2803B0CF004104DF /* BeminBannerButtonViewModel.swift */; };
+		FEAFE6DD2803B0CF004104DF /* BeminBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6D02803B0CF004104DF /* BeminBannerCell.swift */; };
+		FEAFE6DE2803B0CF004104DF /* BeminBannerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6D12803B0CF004104DF /* BeminBannerListViewModel.swift */; };
+		FEAFE6DF2803B0CF004104DF /* BeminBannerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6D22803B0CF004104DF /* BeminBannerListView.swift */; };
+		FEAFE6E02803B0CF004104DF /* BeminBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6D32803B0CF004104DF /* BeminBannerView.swift */; };
+		FEAFE6E82803B0E9004104DF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEAFE6E72803B0E9004104DF /* SnapKit */; };
+		FEAFE6EB2803B101004104DF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FEAFE6EA2803B101004104DF /* RxCocoa */; };
+		FEAFE6ED2803B101004104DF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FEAFE6EC2803B101004104DF /* RxRelay */; };
+		FEAFE6EF2803B101004104DF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FEAFE6EE2803B101004104DF /* RxSwift */; };
+		FEAFE6F12803B163004104DF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6F02803B163004104DF /* MainVC.swift */; };
+		FEAFE6F32803B27E004104DF /* Test4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6F22803B27E004104DF /* Test4.swift */; };
+		FEAFE6F62803C204004104DF /* TotalBannerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6F52803C204004104DF /* TotalBannerListView.swift */; };
+		FEAFE6F82803C2A3004104DF /* TotalBannerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6F72803C2A3004104DF /* TotalBannerListViewModel.swift */; };
+		FEAFE6FA2803D1FB004104DF /* TotalBannerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6F92803D1FB004104DF /* TotalBannerListCell.swift */; };
+		FEAFE6FC2803E6FA004104DF /* ParentMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6FB2803E6FA004104DF /* ParentMainVC.swift */; };
+		FEAFE6FE2803EDDA004104DF /* BannerSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE6FD2803EDDA004104DF /* BannerSources.swift */; };
+		FEAFE7022803FA4D004104DF /* Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE7012803FA4D004104DF /* Test1.swift */; };
+		FEAFE7042803FA52004104DF /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE7032803FA52004104DF /* Test2.swift */; };
+		FEAFE7062803FA58004104DF /* Test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAFE7052803FA58004104DF /* Test3.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FEAFE6B02803B089004104DF /* BeminBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeminBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAFE6B32803B089004104DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEAFE6B52803B089004104DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FEAFE6BC2803B089004104DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEAFE6BF2803B089004104DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEAFE6C12803B089004104DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEAFE6C92803B0CF004104DF /* BeminBannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerViewModel.swift; sourceTree = "<group>"; };
+		FEAFE6CC2803B0CF004104DF /* BeminBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerButton.swift; sourceTree = "<group>"; };
+		FEAFE6CD2803B0CF004104DF /* BeminBannerButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerButtonViewModel.swift; sourceTree = "<group>"; };
+		FEAFE6D02803B0CF004104DF /* BeminBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerCell.swift; sourceTree = "<group>"; };
+		FEAFE6D12803B0CF004104DF /* BeminBannerListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerListViewModel.swift; sourceTree = "<group>"; };
+		FEAFE6D22803B0CF004104DF /* BeminBannerListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerListView.swift; sourceTree = "<group>"; };
+		FEAFE6D32803B0CF004104DF /* BeminBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeminBannerView.swift; sourceTree = "<group>"; };
+		FEAFE6F02803B163004104DF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FEAFE6F22803B27E004104DF /* Test4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test4.swift; sourceTree = "<group>"; };
+		FEAFE6F52803C204004104DF /* TotalBannerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBannerListView.swift; sourceTree = "<group>"; };
+		FEAFE6F72803C2A3004104DF /* TotalBannerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBannerListViewModel.swift; sourceTree = "<group>"; };
+		FEAFE6F92803D1FB004104DF /* TotalBannerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBannerListCell.swift; sourceTree = "<group>"; };
+		FEAFE6FB2803E6FA004104DF /* ParentMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentMainVC.swift; sourceTree = "<group>"; };
+		FEAFE6FD2803EDDA004104DF /* BannerSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSources.swift; sourceTree = "<group>"; };
+		FEAFE7012803FA4D004104DF /* Test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1.swift; sourceTree = "<group>"; };
+		FEAFE7032803FA52004104DF /* Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
+		FEAFE7052803FA58004104DF /* Test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEAFE6AD2803B089004104DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAFE6ED2803B101004104DF /* RxRelay in Frameworks */,
+				FEAFE6EB2803B101004104DF /* RxCocoa in Frameworks */,
+				FEAFE6EF2803B101004104DF /* RxSwift in Frameworks */,
+				FEAFE6E82803B0E9004104DF /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEAFE6A72803B089004104DF = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6B22803B089004104DF /* BeminBanner */,
+				FEAFE6B12803B089004104DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEAFE6B12803B089004104DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6B02803B089004104DF /* BeminBanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEAFE6B22803B089004104DF /* BeminBanner */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6B32803B089004104DF /* AppDelegate.swift */,
+				FEAFE707280402BC004104DF /* Example */,
+				FEAFE6B52803B089004104DF /* SceneDelegate.swift */,
+				FEAFE6C72803B0CF004104DF /* BeminBannerView */,
+				FEAFE6BC2803B089004104DF /* Assets.xcassets */,
+				FEAFE6BE2803B089004104DF /* LaunchScreen.storyboard */,
+				FEAFE6C12803B089004104DF /* Info.plist */,
+			);
+			path = BeminBanner;
+			sourceTree = "<group>";
+		};
+		FEAFE6C72803B0CF004104DF /* BeminBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6C82803B0CF004104DF /* Presentation */,
+				FEAFE6D42803B0CF004104DF /* Entities */,
+			);
+			path = BeminBannerView;
+			sourceTree = "<group>";
+		};
+		FEAFE6C82803B0CF004104DF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6D32803B0CF004104DF /* BeminBannerView.swift */,
+				FEAFE6C92803B0CF004104DF /* BeminBannerViewModel.swift */,
+				FEAFE6CA2803B0CF004104DF /* SubComponents */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FEAFE6CA2803B0CF004104DF /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6F42803C1BF004104DF /* TotalBannerListView */,
+				FEAFE6CB2803B0CF004104DF /* BannerButton */,
+				FEAFE6CE2803B0CF004104DF /* BannerList */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		FEAFE6CB2803B0CF004104DF /* BannerButton */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6CC2803B0CF004104DF /* BeminBannerButton.swift */,
+				FEAFE6CD2803B0CF004104DF /* BeminBannerButtonViewModel.swift */,
+			);
+			path = BannerButton;
+			sourceTree = "<group>";
+		};
+		FEAFE6CE2803B0CF004104DF /* BannerList */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6D22803B0CF004104DF /* BeminBannerListView.swift */,
+				FEAFE6D12803B0CF004104DF /* BeminBannerListViewModel.swift */,
+				FEAFE6CF2803B0CF004104DF /* Cell */,
+			);
+			path = BannerList;
+			sourceTree = "<group>";
+		};
+		FEAFE6CF2803B0CF004104DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6D02803B0CF004104DF /* BeminBannerCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEAFE6D42803B0CF004104DF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6FD2803EDDA004104DF /* BannerSources.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FEAFE6F42803C1BF004104DF /* TotalBannerListView */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6F52803C204004104DF /* TotalBannerListView.swift */,
+				FEAFE6F72803C2A3004104DF /* TotalBannerListViewModel.swift */,
+				FEAFE6FF2803EE06004104DF /* Cell */,
+			);
+			path = TotalBannerListView;
+			sourceTree = "<group>";
+		};
+		FEAFE6FF2803EE06004104DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6F92803D1FB004104DF /* TotalBannerListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEAFE7002803FA42004104DF /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE7012803FA4D004104DF /* Test1.swift */,
+				FEAFE7032803FA52004104DF /* Test2.swift */,
+				FEAFE7052803FA58004104DF /* Test3.swift */,
+				FEAFE6F22803B27E004104DF /* Test4.swift */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
+		FEAFE707280402BC004104DF /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFE6FB2803E6FA004104DF /* ParentMainVC.swift */,
+				FEAFE6F02803B163004104DF /* MainVC.swift */,
+				FEAFE7002803FA42004104DF /* TestView */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEAFE6AF2803B089004104DF /* BeminBanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEAFE6C42803B089004104DF /* Build configuration list for PBXNativeTarget "BeminBanner" */;
+			buildPhases = (
+				FEAFE6AC2803B089004104DF /* Sources */,
+				FEAFE6AD2803B089004104DF /* Frameworks */,
+				FEAFE6AE2803B089004104DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeminBanner;
+			packageProductDependencies = (
+				FEAFE6E72803B0E9004104DF /* SnapKit */,
+				FEAFE6EA2803B101004104DF /* RxCocoa */,
+				FEAFE6EC2803B101004104DF /* RxRelay */,
+				FEAFE6EE2803B101004104DF /* RxSwift */,
+			);
+			productName = BeminBanner;
+			productReference = FEAFE6B02803B089004104DF /* BeminBanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEAFE6A82803B089004104DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					FEAFE6AF2803B089004104DF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = FEAFE6AB2803B089004104DF /* Build configuration list for PBXProject "BeminBanner" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEAFE6A72803B089004104DF;
+			packageReferences = (
+				FEAFE6E62803B0E9004104DF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FEAFE6E92803B101004104DF /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = FEAFE6B12803B089004104DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEAFE6AF2803B089004104DF /* BeminBanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEAFE6AE2803B089004104DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAFE6C02803B089004104DF /* LaunchScreen.storyboard in Resources */,
+				FEAFE6BD2803B089004104DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEAFE6AC2803B089004104DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAFE7062803FA58004104DF /* Test3.swift in Sources */,
+				FEAFE6DF2803B0CF004104DF /* BeminBannerListView.swift in Sources */,
+				FEAFE6F32803B27E004104DF /* Test4.swift in Sources */,
+				FEAFE6F82803C2A3004104DF /* TotalBannerListViewModel.swift in Sources */,
+				FEAFE6DA2803B0CF004104DF /* BeminBannerViewModel.swift in Sources */,
+				FEAFE6FA2803D1FB004104DF /* TotalBannerListCell.swift in Sources */,
+				FEAFE6B42803B089004104DF /* AppDelegate.swift in Sources */,
+				FEAFE6F62803C204004104DF /* TotalBannerListView.swift in Sources */,
+				FEAFE6FC2803E6FA004104DF /* ParentMainVC.swift in Sources */,
+				FEAFE6FE2803EDDA004104DF /* BannerSources.swift in Sources */,
+				FEAFE6E02803B0CF004104DF /* BeminBannerView.swift in Sources */,
+				FEAFE6B62803B089004104DF /* SceneDelegate.swift in Sources */,
+				FEAFE6DE2803B0CF004104DF /* BeminBannerListViewModel.swift in Sources */,
+				FEAFE7042803FA52004104DF /* Test2.swift in Sources */,
+				FEAFE6DB2803B0CF004104DF /* BeminBannerButton.swift in Sources */,
+				FEAFE6DC2803B0CF004104DF /* BeminBannerButtonViewModel.swift in Sources */,
+				FEAFE7022803FA4D004104DF /* Test1.swift in Sources */,
+				FEAFE6DD2803B0CF004104DF /* BeminBannerCell.swift in Sources */,
+				FEAFE6F12803B163004104DF /* MainVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEAFE6BE2803B089004104DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEAFE6BF2803B089004104DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEAFE6C22803B089004104DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEAFE6C32803B089004104DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEAFE6C52803B089004104DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CNGL9PR533;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeminBanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirkim.BeminBanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FEAFE6C62803B089004104DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CNGL9PR533;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeminBanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirkim.BeminBanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEAFE6AB2803B089004104DF /* Build configuration list for PBXProject "BeminBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEAFE6C22803B089004104DF /* Debug */,
+				FEAFE6C32803B089004104DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEAFE6C42803B089004104DF /* Build configuration list for PBXNativeTarget "BeminBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEAFE6C52803B089004104DF /* Debug */,
+				FEAFE6C62803B089004104DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEAFE6E62803B0E9004104DF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		FEAFE6E92803B101004104DF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEAFE6E72803B0E9004104DF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEAFE6E62803B0E9004104DF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FEAFE6EA2803B101004104DF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEAFE6E92803B101004104DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FEAFE6EC2803B101004104DF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEAFE6E92803B101004104DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FEAFE6EE2803B101004104DF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEAFE6E92803B101004104DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FEAFE6A82803B089004104DF /* Project object */;
+}
