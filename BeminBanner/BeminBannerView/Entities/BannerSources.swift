@@ -9,14 +9,14 @@ import UIKit
 
 struct BannerSource {
     let bannerCellImageName: String
-    let totalViewCellImageName: String
+    var totalViewCellImageName: String?
     let presentVC: UIViewController
 }
 
 struct BannerSources {
     let bannerType: BannerButtonType
-    let title: String
-    let subTitle: String
-    let totalViewCellRatio: CGFloat
+    var title: String = ""
+    var subTitle: String = ""
+    var totalViewCellRatio: CGFloat = 0
     let sources: [BannerSource]
 }

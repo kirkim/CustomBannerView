@@ -13,7 +13,7 @@ class BeminBannerViewModel {
     private let disposeBag = DisposeBag()
     let bannerListViewModel: BeminBannerListViewModel
     let buttonViewModel: BeminBannerButtonViewModel
-    let totalBannerListViewModel: TotalBannerListViewModel
+    var totalBannerListViewModel: TotalBannerListViewModel?
     
     // View -> ViewModel
     let buttonTapped = PublishRelay<Void>()
@@ -24,10 +24,16 @@ class BeminBannerViewModel {
     init(data: BannerSources) {
         let bannerImageNames = data.sources.map { $0.bannerCellImageName }
         let totalPageCount = data.sources.count
-        let totalBannerListData = data.sources.map { TotalBannerListData(cellImage: $0.totalViewCellImageName, presentVC: $0.presentVC)}
         self.bannerListViewModel = BeminBannerListViewModel(bannerImageNames: bannerImageNames)
         self.buttonViewModel = BeminBannerButtonViewModel(type: data.bannerType,nowPage: bannerListViewModel.nowPage, totalPageCount: totalPageCount)
-        self.totalBannerListViewModel = TotalBannerListViewModel(data: totalBannerListData)
+        
+        if (data.bannerType == .event) {
+            let totalBannerListData = data.sources.map { source -> TotalBannerListData in
+                let totalViewCellImageName = source.totalViewCellImageName != nil ? source.totalViewCellImageName! : source.bannerCellImageName
+                return TotalBannerListData(cellImage: totalViewCellImageName, presentVC: source.presentVC)
+            }
+            self.totalBannerListViewModel = TotalBannerListViewModel(data: totalBannerListData)
+        }
         
         buttonViewModel.tapped.emit { (nowPage, bannerType) in
             switch bannerType {
@@ -37,7 +43,7 @@ class BeminBannerViewModel {
                 self.presentVC.accept(vc)
             case .event:
                 let listView = TotalBannerListView(title: data.title, subTitle: data.subTitle, cellRatio: data.totalViewCellRatio)
-                listView.bind(self.totalBannerListViewModel)
+                listView.bind(self.totalBannerListViewModel!)
 //                parentViewController.navigationController?.pushViewController(listView, animated: true)
                 self.presentVC.accept(listView)
             }

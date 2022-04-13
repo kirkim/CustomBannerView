@@ -76,7 +76,6 @@ extension BeminBannerListView: UICollectionViewDelegateFlowLayout {
 extension BeminBannerListView {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-        print(page)
         nowPage.onNext(page)
         startTimer()
     }
