@@ -1,16 +1,14 @@
 # My Custom BannerView like 배민라이더스
 
-## Last updated on 2022.04.11
+## Last updated on 2022.04.13
 
 <img src="https://kirkim.github.io/assets/storage/beminBanner/result.gif" width="30%" style="max-width:200px" alt="early version">
 
 ---
 
-## How to use
+## How to use (Example)
 
 you just make `BeminBannerView`. then choose either `basic` type or `event` type.
-
-### &lt; Sample use &gt;
 
 ## &#91; bannerType: .event &#93;
 
