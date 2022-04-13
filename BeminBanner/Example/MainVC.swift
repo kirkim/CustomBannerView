@@ -11,10 +11,7 @@ import SnapKit
 class MainVC: UIViewController {
     private let banner = BeminBannerView(
         data: BannerSources(
-            bannerType: .event,
-            title: "이벤트",
-            subTitle: "지금 진행 중!",
-            totalViewCellRatio: 0.5,
+            bannerType: .basic,
             sources: [
                 BannerSource(bannerCellImageName: "1.png", totalViewCellImageName: "1.png", presentVC: Test1()),
                 BannerSource(bannerCellImageName: "2.png", totalViewCellImageName: "2.png", presentVC: Test2()),

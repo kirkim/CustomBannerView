@@ -89,10 +89,12 @@ struct BannerSources {
 
 - `title`: banner main title
 - `subTitle`: title in TotalBannerView
-  <img src="https://kirkim.github.io/assets/storage/beminBanner/title_subtitle.png" width="30%" style="max-width:200px" alt="title & subtitle">
+
+<img src="https://kirkim.github.io/assets/storage/beminBanner/title_subtitle.png" width="30%" style="max-width:200px" alt="title & subtitle">
 
 ---
 
 - `totalViewCellRatio`:
   totalViewCellRatio = B / A
-  <img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">
+
+<img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">
