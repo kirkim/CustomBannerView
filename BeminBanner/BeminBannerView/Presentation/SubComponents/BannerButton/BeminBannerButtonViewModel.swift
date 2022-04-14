@@ -50,10 +50,4 @@ struct BeminBannerButtonViewModel {
             }
             .asSignal(onErrorJustReturn: (0, .basic) )
     }
-    
-    func buttonTap(_ viewController: UIViewController) {
-        let vc = Test3()
-        viewController.present(vc, animated: true)
-    }
-    
 }

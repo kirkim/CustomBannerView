@@ -20,10 +20,11 @@ class BeminBannerViewModel {
     
     // ViewModel -> View
     let presentVC = PublishRelay<UIViewController>()
+    let totalPageCount: Int
     
     init(data: BannerSources) {
         let bannerImageNames = data.sources.map { $0.bannerCellImageName }
-        let totalPageCount = data.sources.count
+        totalPageCount = data.sources.count
         self.bannerListViewModel = BeminBannerListViewModel(bannerImageNames: bannerImageNames)
         self.buttonViewModel = BeminBannerButtonViewModel(type: data.bannerType,nowPage: bannerListViewModel.nowPage, totalPageCount: totalPageCount)
         

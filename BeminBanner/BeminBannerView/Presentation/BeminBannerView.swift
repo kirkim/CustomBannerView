@@ -12,13 +12,14 @@ import RxCocoa
 
 class BeminBannerView: UIView {
     let disposeBag = DisposeBag()
-    private let bannerListView = BeminBannerListView()
+    private let bannerListView: BeminBannerListView
     private let bannerButton = BeminBannerButton()
     private let viewModel: BeminBannerViewModel
 
     //MARK: - MyBannerUsingRxswift init
     init(data: BannerSources) {
         self.viewModel = BeminBannerViewModel(data: data)
+        self.bannerListView = BeminBannerListView(totalPageCount: viewModel.totalPageCount)
         super.init(frame: CGRect.zero)
         self.bind()
         self.layout()

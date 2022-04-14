@@ -10,12 +10,14 @@ import RxSwift
 import RxCocoa
 
 class BeminBannerListView: UICollectionView {
-    let disposeBag = DisposeBag()
-    var timer: Disposable?
-    let nowPage = BehaviorSubject<Int>(value: 0)
+    private let disposeBag = DisposeBag()
+    private var timer: Disposable?
+    private let nowPage = BehaviorSubject<Int>(value: 0)
+    private let totalPageCount: Int
     
     //MARK: RxBannerCollectionView: init
-    init() {
+    init(totalPageCount: Int) {
+        self.totalPageCount = totalPageCount
         super.init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
         self.attribute()
         self.layout()
@@ -89,7 +91,7 @@ extension BeminBannerListView {
         self.timer = Observable<Int>
             .interval(.seconds(period), scheduler: MainScheduler.instance)
             .withLatestFrom(nowPage) {
-                return (1 + $1) % 4
+                return (1 + $1) % self.totalPageCount
             }
             .subscribe(onNext: { [weak self] page in
                 self?.nowPage.onNext(page)
