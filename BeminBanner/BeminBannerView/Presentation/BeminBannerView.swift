@@ -23,7 +23,6 @@ class BeminBannerView: UIView {
         super.init(frame: CGRect.zero)
         self.bind()
         self.layout()
-        self.attribute()
     }
     
     required init?(coder: NSCoder) {
@@ -40,13 +39,16 @@ class BeminBannerView: UIView {
             $0.leading.top.trailing.bottom.equalToSuperview()
         }
         
-        self.bannerButton.snp.makeConstraints {
-            $0.trailing.bottom.equalToSuperview().offset(-20)
+        var buttonWidth = 70
+        if (viewModel.bannerButtonType == .event) {
+            buttonWidth = 100
         }
+        setButtonFrame(frame: CGRect(x: 380 - buttonWidth, y: 150, width: buttonWidth, height: 30))
     }
     
-    private func attribute() {
-   
+    func setButtonFrame(frame: CGRect) {
+        self.bannerButton.frame = frame
+        self.bannerButton.layer.cornerRadius = frame.height / 2
     }
     
     private func bind() {

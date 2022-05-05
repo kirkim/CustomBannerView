@@ -9,14 +9,28 @@ import UIKit
 import SnapKit
 
 class MainVC: UIViewController {
+//    private let banner = BeminBannerView(
+//        data: BannerSources(
+//            bannerType: .basic,
+//            sources: [
+//                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "1.png"), presentVC: Test1()),
+//                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "2.png"), presentVC: Test2()),
+//                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "3.png"), presentVC: Test3()),
+//                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "4.png"), presentVC: Test4())
+//            ]
+//        )
+//    )
     private let banner = BeminBannerView(
         data: BannerSources(
-            bannerType: .basic,
+            bannerType: .event,
+            title: "이벤트",
+            subTitle: "지금 진행 중!",
+            totalViewCellRatio: 0.5,
             sources: [
-                BannerSource(bannerCellImageName: "1.png", totalViewCellImageName: "1.png", presentVC: Test1()),
-                BannerSource(bannerCellImageName: "2.png", totalViewCellImageName: "2.png", presentVC: Test2()),
-                BannerSource(bannerCellImageName: "3.png", totalViewCellImageName: "3.png", presentVC: Test3()),
-                BannerSource(bannerCellImageName: "4.png", totalViewCellImageName: "4.png", presentVC: Test4())
+                BannerSource(bannerImage: BeminCellImage.storedImage(name: "1.png"), totalViewCellImage: BeminCellImage.storedImage(name: "1.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.storedImage(name: "2.png"), totalViewCellImage: BeminCellImage.storedImage(name: "2.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.storedImage(name: "3.png"), totalViewCellImage: BeminCellImage.storedImage(name: "3.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.storedImage(name: "4.png"), totalViewCellImage: BeminCellImage.storedImage(name: "4.png"), presentVC: Test1()),
             ]
         )
     )

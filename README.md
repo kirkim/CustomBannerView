@@ -14,19 +14,19 @@ you just make `BeminBannerView`. then choose either `basic` type or `event` type
 
 ```swift
 private let banner = BeminBannerView(
-    data: BannerSources(
-        bannerType: .event,
-        title: "이벤트",
-        subTitle: "지금 진행 중!",
-        totalViewCellRatio: 0.5,
-        sources: [
-            BannerSource(bannerCellImageName: "1.png", totalViewCellImageName: "1.png", presentVC: Test1()),
-            BannerSource(bannerCellImageName: "2.png", totalViewCellImageName: "2.png", presentVC: Test2()),
-            BannerSource(bannerCellImageName: "3.png", totalViewCellImageName: "3.png", presentVC: Test3()),
-            BannerSource(bannerCellImageName: "4.png", totalViewCellImageName: "4.png", presentVC: Test4())
-        ]
+        data: BannerSources(
+            bannerType: .event,
+            title: "이벤트",
+            subTitle: "지금 진행 중!",
+            totalViewCellRatio: 0.5,
+            sources: [
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "1.png"), totalViewCellImage: BeminCellImage.sotoredImage(name: "1.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "2.png"), totalViewCellImage: BeminCellImage.sotoredImage(name: "2.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "3.png"), totalViewCellImage: BeminCellImage.sotoredImage(name: "3.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "4.png"), totalViewCellImage: BeminCellImage.sotoredImage(name: "4.png"), presentVC: Test1()),
+            ]
+        )
     )
-)
 ```
 
 ## &#91; bannerType: .basic &#93;
@@ -36,10 +36,10 @@ private let banner = BeminBannerView(
         data: BannerSources(
             bannerType: .basic,
             sources: [
-                BannerSource(bannerCellImageName: "1.png", presentVC: Test1()),
-                BannerSource(bannerCellImageName: "2.png", presentVC: Test2()),
-                BannerSource(bannerCellImageName: "3.png", presentVC: Test3()),
-                BannerSource(bannerCellImageName: "4.png", presentVC: Test4())
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "1.png"), presentVC: Test1()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "2.png"), presentVC: Test2()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "3.png"), presentVC: Test3()),
+                BannerSource(bannerImage: BeminCellImage.sotoredImage(name: "4.png"), presentVC: Test4())
             ]
         )
     )
@@ -56,9 +56,14 @@ self.banner.addTouchEvent(targetViewController: self)
 ## Struct Type
 
 ```swift
+enum BeminCellImage {
+    case urlImage(url: String)
+    case storedImage(name: String)
+}
+
 struct BannerSource {
-    let bannerCellImageName: String
-    var totalViewCellImageName: String?
+    let bannerImage: BeminCellImage
+    var totalViewCellImage: BeminCellImage?
     let presentVC: UIViewController
 }
 
@@ -68,6 +73,11 @@ struct BannerSources {
     var subTitle: String = ""
     var totalViewCellRatio: CGFloat = 0
     let sources: [BannerSource]
+}
+
+struct TotalBannerListData {
+    let cellImage: BeminCellImage
+    let presentVC: UIViewController
 }
 ```
 
@@ -96,3 +106,23 @@ struct BannerSources {
   totalViewCellRatio = B / A
 
 <img src="https://kirkim.github.io/assets/storage/beminBanner/ratio.png" width="30%" style="max-width:200px" alt="ratio">
+
+---
+
+### BeminCellImage
+
+You can also use Image by URL address.
+
+#### .urlImage(url:)
+
+```swift
+// example
+BeminCellImage.urlImage(url: "https://example/exmple_image")
+```
+
+#### .storedImage(name:)
+
+```swift
+// example
+BeminCellImage.storedImage(name: "example.png")
+```
