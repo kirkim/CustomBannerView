@@ -1,8 +1,15 @@
 # My Custom BannerView like 배민라이더스
 
-## Last updated on 2022.04.13
+## Last updated on 2022.05.05
 
 <img src="https://kirkim.github.io/assets/storage/beminBanner/result.gif" width="30%" style="max-width:200px" alt="early version">
+
+---
+
+## List of packages used
+
+- <a href="https://github.com/ReactiveX/RxSwift" target="blank">RxSwift, RxCocoa</a>
+- <a href="https://github.com/SnapKit/SnapKit" target="blank">Snapkit</a>
 
 ---
 
@@ -49,6 +56,14 @@ If you want to present SubViewController by click Event. you have to call `.addT
 
 ```swift
 self.banner.addTouchEvent(targetViewController: self)
+```
+
+You can also change frame of BannerButton using `.setButton(frame:CGRect)`
+
+```swift
+// example
+var buttonWidth = 70
+banner.setButtonFrame(frame: CGRect(x: windowWidth-buttonWidth-20 , y: windowWidth*(8/13)-120, width: buttonWidth, height: buttonheight))
 ```
 
 ---
